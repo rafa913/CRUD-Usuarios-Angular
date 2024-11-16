@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -29,6 +31,7 @@ import { MenuComponent } from './components/menu/menu.component';
     BrowserAnimationsModule,
     FormsModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     HttpClientModule
   ],
   providers: [
