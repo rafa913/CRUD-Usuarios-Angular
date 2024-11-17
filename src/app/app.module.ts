@@ -14,6 +14,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { ButtonComponent } from './components/button/button.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { environment } from '../environments/environment.development';
+import { AngularFireModule } from '@angular/fire/compat'
 
 
 
@@ -32,7 +34,9 @@ import { MenuComponent } from './components/menu/menu.component';
     FormsModule,
     MatIconModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+   
   ],
   providers: [
     provideClientHydration(),
