@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CRUD-Angular": {
+    "crud-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -81,10 +81,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "CRUD-Angular:build:production"
+              "buildTarget": "crud-angular:build:production"
             },
             "development": {
-              "buildTarget": "CRUD-Angular:build:development"
+              "buildTarget": "crud-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -92,7 +92,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "CRUD-Angular:build"
+            "buildTarget": "crud-angular:build"
           }
         },
         "test": {
