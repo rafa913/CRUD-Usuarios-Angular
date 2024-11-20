@@ -4,14 +4,16 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 import { MatIconModule } from '@angular/material/icon';
-import { AppRoutingModule } from './app-routing.module';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -23,6 +25,8 @@ import { CrudComponent } from './pages/crud/crud.component';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { MatSortModule } from '@angular/material/sort';
 import { AngularFireModule } from '@angular/fire/compat';
+import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-user.component';
+import { ModalFormUserComponent } from './pages/crud/modal-form-user/modal-form-user.component';
 
 
 
@@ -34,7 +38,9 @@ import { AngularFireModule } from '@angular/fire/compat';
     ButtonComponent,
     HomeComponent,
     MenuComponent,
-    CrudComponent
+    CrudComponent,
+    ModalViewUserComponent,
+    ModalFormUserComponent
   ],
   imports: [
     HttpClientModule,
@@ -51,6 +57,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     MatPaginator,
     MatSortModule, 
     MatPaginatorModule,
+    MatDialogModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule
   ],
