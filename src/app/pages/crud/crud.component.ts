@@ -49,6 +49,7 @@ export class CrudComponent implements OnInit{
         this.dataSource = new MatTableDataSource<any>(this.listusers);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort; 
+        this.paginator._intl.itemsPerPageLabel="Itens por página"
         
       },
       error:(err) => {
@@ -82,6 +83,5 @@ this.dialog.open(ModalFormUserComponent,{
   width:'700px',
   height:'400px',
 }).afterClosed().subscribe(() => this.getListUser() ); 
-
 }
 }
