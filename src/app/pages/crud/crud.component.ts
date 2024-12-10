@@ -84,4 +84,12 @@ this.dialog.open(ModalFormUserComponent,{
   height:'400px',
 }).afterClosed().subscribe(() => this.getListUser() ); 
 }
+
+openModalEditUser(user : User){
+  this.dialog.open(ModalFormUserComponent,{
+    width:'700px',
+    height:'400px',
+    data : user
+  }).afterClosed().subscribe(() => this.getListUser() ); 
+}
 }
